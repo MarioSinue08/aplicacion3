@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tercera Aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/tema3.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<style>
+  p {
+	  text-align: justify;
+  }
+  h2 {
+	text-align: center;
+  }
+  h4 {
+	text-align: center;
+	font-size: 20px;
+  }
+  h5 {
+	  font-size: 18px;
+	  border-bottom: 3px solid #CCC;
+	  color: #30F;
+  }
+  #izquierda img {
+	float: left;
+	position: relative;
+	top: -10px;
+	left: -10px;
+}
+#izquierda ul {
+	position: relative;
+	left: 10px;
+	text-align: justify;
+}
+    #izquierda p {
+	position: relative;
+	left: 10px;
+	text-align: justify;
+}
+ #derecha img {
+	float: right;
+	position: relative;
+	top: 0px;
+	right: -20px;
+}
+    #derecha p {
+	position: relative;
+	right: 10px;
+	text-align: justify;
+}
+.linea {
+	border-bottom: 3px solid #30F;
+	}
+	a {
+		
+	text-decoration: none;	
+	}
+	.boton {
+		position: relative;
+		float: right;
+	  margin: 0px;
+	}
+	.boton a:link {
+		color: #F00;
+	}
+.boton a {
+	text-align: center;
+	color: #FFF;
+	border: 1px solid #0F3;
+	padding: 10px;
+	width: 200px;
+	display: block;
+    border-radius: 20px;
+	background: #0F3;
+    } 
+	
+.boton a:hover {
+	border: 1px solid #630;
+	color: #FFFFFF;
+	background: #630;
+    }
+	img {
+		margin-bottom: 13px;
+	    border-radius: 15px;
+	}
+	
+</style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body>
+<div data-role="page" id="Principal" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1>Volcán Popocatépetl</h1>
+  </div>
+   
+  <div data-role="main" class="ui-content">
+    
+    <div data-role="collapsible" data-content-theme="false">
+    <h2>Tamaño</h2>
+      <div><center>
+        <p>Es un volcán de forma cónica simétrica.
+Su altura sobre el nivel del mar es de 5,452 m.(17,887 pies).
+El cráter en la parte más ancha mide 612 m. y en la más angosta 400 m. Tiene una profundidad máxima de 505 m. y es el vértice donde limitan tres estados: México, Puebla y Morelos.
+Las dos principales cimas del Popo son el Pico Mayor y el Espinazo del Diablo, ambos alrededor del cráter.</p>
+         <p>Es el segundo volcán más alto de nuestro país; el primero lo ocupa el Pico de Orizaba o Citlaltépetl con 5,747 m. y el tercero el Iztaccíhuatl o Ixtaccíhualtl ( Con quien esta unido por la parte norte mediante un paso montañoso conocido como Paso de Cortés) con 5,286 m. de altura.</p></center></div>
+        <br>
+      <div ><center>
+    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','imagenes/crater.png',1)"><img src="imagenes/altitud.png" width="367" height="269" id="Image2" /></a>
+      </center>
+   </div>
+   </div>
+  </div> 
+   <div data-role="main" class="ui-content">
+    <div data-role="collapsible" data-content-theme="false">
+      <h1>Localización</h1>
+      <div id="izquierda">
+       <img src="imagenes/ubicacion.png" width="300px" height="300px"> 
+       <p>El Popocatépetl esta ubicado en los estados de Morelos, Puebla (45 kilometros) y el Estado de México( a 55 kilometros). Al sur de la Sierra Volcánica Transversal que constituye la espina dorsal del Altiplano Mexicano.</p>
+       <p>En el Estado de México colinda con los municipios: Tlamanalco, Amecameca, Atlauta y Ecatzingo.</p>
+       <p>Con el estado de Morelos colinda específicamente con el municipio de Tetela del Volcán.</p>
+       <p>Por la parte de Puebla colinda con Huejotzingo, San Salvador el Verde, Domingo Arenas, San Nicolás de los Ranchos y Tochimilco.</p>
+        <br></center>
+     </div>
+    </div>
+  </div> 
+  
+   <div data-role="main" class="ui-content">
+    <div data-role="collapsible" data-content-theme="false">
+      <h1>Antigüedad</h1>
+      <div id="derecha">
+      <div>
+      <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('v19','','imagenes/volcan2.png',1)"><img src="imagenes/antiguedad.png" width="367" height="269" id="v19" /></a>
+      </div>
+        <p>El Popocatépetl es un volcán geológicamente joven. Se cree que tiene unos 730,000 años de antigüedad y que es remanente de volcanes antiguos que colapsaron. Su historia comenzó con la formación del volcán Nexpayantla a través de la expulsión de flujos de lava andesítica y dacítica. Años después, este volcán colapsó y en consecuencia se formó una caldera, es decir, una depresión amplia y profunda debajo de la cual se halla una cámara de magma.</p>
+        <p>El cono de un nuevo volcán, Ventorrillo, emergió entonces, pero este experimentó un colapso hace aproximadamente 23,000 años. Posteriormente empezó a emerger el volcán El Fraile, pero al cabo de un tiempo terminó por colapsar también debido a una fuerte erupción, tras lo cual el lado sur del cono quedó destruido.</p>
+        <p>El moderno Popocatépetl tuvo su origen durante el Pleistoceno tardío-Holoceno, después del derrumbe de El Fraile. El cono perteneciente a Don Goyo se formó paulatinamente hasta adquirir un tamaño significativo, pero produjo una fuerte erupción que hizo colapsar un lateral del cono y generar una avalancha de depósitos que cubrió la superficie. Al menos 4 avalanchas subsecuentes contribuyeron a formar el moderno cono.</p>
+        <br>
+      </div>
+     </div>
+    </div>
+      <div>
+<ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class="ui-first-child ui-last-child">
+      <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+        <h3>Actividad Volcánica y Monitoreo</h3>
+      </a>
+    </li> 
+    <li class="ui-first-child ui-last-child">
+       <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+        <h3>Medidas de Prevención</h3>
+        <p>En una erupción y caída de ceniza</p>
+      </a>
+    </li>   
+    <li class="ui-first-child ui-last-child">
+       <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+        <h3>Estados Afectados</h3>
+        <p>En caso de erupción</p>
+      </a>
+    </li> 
+  </ul> 
+  </div>
+  <div data-role="main" class="ui-content">
+    <div data-role="collapsible" data-content-theme="false">
+      <h1>Galeria</h1>
+      <div>
+        <iframe src="visor/indexwow.html" style="width:900px;height:340px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+      </div>
+     </div>
+     <div class="boton">
+      <a href="#Pagina4">Más volcanes...</a>
+     </div>
+    </div>
+   
+  <div data-role="footer" align="center" data-theme="a">
+    <h4>Aplicacion Tres</h4>
+    <div>
+      <img src="imagenes/pie.png" width="46" height="46">
+    </div>
+    <div>
+      <h4>Mario Sinue Prudente Carrera</h4>
+    </div>
+    </div>
+  </div>
+  
+  <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Actividad Volcanica y Monitoreo</h1>
+    </div>
+    <div data-role="content">
+       <div id="izquierda">
+           <h4 class="linea">Actividades Reciente</h4>
+           <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('v92','','imagenes/actividad2.png',1)"><img src="imagenes/actividad.png" width="400px" height="400px" id="v92" /></a>
+          <p>Ha tenido por lo menos cuatro erupciones explosivas que colapsaron el cono, dando como resultado enormes derrumbes prehistóricos de enormes proporciones.</p>
+          <p>Hace 14,000 años ocurrió una gran erupción que produjo abundantes lluvias de ceniza y piedra pómez. Durante los siguientes12 milenios han sucedido por lo menos seis grandes erupciones explosivas. La última gran erupción ocurrió aproximadamente entre los años 800 y 1,000 de nuestra era.</p>
+          <ul>
+            <li>1363 Comienza a humear.</li>
+            <li>1519 y 1528 arroja humo, cenizas y piedras incandescentes.</li>
+            <li>1530 produce solo humo.</li> 
+            <li>1539 lanza grandes llamas, piedras y cenizas.</li> 
+            <li>1570 Para este año incrementó la actividad sísmica.</li> 
+            <li>1571 Arrojó gran cantidad de cenizas.</li> 
+            <li>1592 Arrojó vapores y cenizas.</li>
+            <li>1663 Arroja gran cantidad de ceniza y con ella piedras pómez.</li> 
+            <li>1665 Estuvo arrojando cenizas por varios días.</li> 
+            <li>1697 Hizo una erupción de fuego.</li> <li>1720 Registró una nueva erupción.</li> 
+            <li>1790, 1802 y 1804 Arrojaba una columna de humo</li>
+            <li>1919: La erupción registrada en este año fue considerada por algunos como consecuencia de una explosión de dinamita provocada para la extracción de azufre. Los orígenes de esta actividad la inició Hernán Cortés en 1519 cuando mandó a Diego de Ordaz a que subiera el Popo pero no logró alcanzar el cráter; en cambio al año siguiente otros soldados sacaron azufre para fabricar pólvora.</li>
+            <li>En 1947 ocurrió una erupción de consideración, para iniciar así un periodo de actividad.</li>
+            <li>A lo largo de 1992 y 1993 aumentaron las fumarolas y los microsismos.</li>
+            <li>21 de diciembre de 1994 registró una explosión que produjo gas y cenizas que fueron transportados por los vientos dominantes, llegando llegaron más allá del Estado de Puebla. Cabe señalar que en este año los monasterios del siglo XVI construidos en las laderas del volcán, fueron declarados Patrimonio de la Humanidad por la UNESCO.</li>
+            <li>1995 Registro una actividad fluctuante.</li>
+            <li>Marzo de 1996: En esta año aumentó la actividad y se formó un domo en el cráter.</li>
+            <li>30 de abril de 1996, El popo lanza una lluvia de piedras incandescentes, provocando la muerte de cinco expertos alpinistas que exploraban el volcán. Durante este año también se registraron varios microsismos.</li>
+            <li>El 30 de junio de 1997 lanzó una fumarola de 8 kilómetros de altura y 50 kilómetros de diámetro.</li>
+            <li>20 de junio del 2003.</li>
+            <li>21 de septiembre del 2003.</li>
+            <li>25 de diciembre de 2005: Se produjo una nueva explosión que provocó una columna de humo y cenizas de tres kilómetros de altura y la expulsión de lava.</li>
+          </ul>	
+          <br>
+      </div>
+      <div id="derecha">
+           <h4 class="linea">Monitoreo</h4>
+           <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('v9','','imagenes/monitoreo2.png',1)"><img src="imagenes/monitoreo.png" width="200px" height="200px" id="v9" /></a>
+          <p>La única manera de percibir y evaluar el estado de actividad y riesgo asociado de un volcán, es a través de la observación y vigilancia sistemática mediante diversos métodos visuales e instrumentales. Si estos se aplican en forma anticipada en las fases previas a un proceso eruptivo, es posible, en la mayoría de los casos, detectar oportunamente un cambio cualitativo y cuantitativo de la actividad que inclusive pudiese conducir a una predicción en el corto plazo de un proceso eruptivo inminente y poner en marcha, de parte de las autoridades de Protección Civil el plan de emergencia previamente establecido. Una muestra de un sistema de vigilancia y monitoreo oportunamente establecido es el del volcán Popocatépetl. En un esfuerzo conjunto del <b>Centro Nacional de Prevención de Desastres (CENAPRED)</b>, de la <b>Secretaría de Gobernación</b>, los <b>Institutos de Geofísica</b> y de <b>Ingeniería</b> , de la <b>UNAM</b> , y con la colaboración del <b>Cascades Volcano Observatory</b>, del <b>U.S. Geological Survey</b>, se estableció en los últimos años un complejo sistema de observación telemétrico con una central de adquisición y procesamiento de datos.</p>
+          <p>Cuatro tipos de monitoreo se han establecido en el volcán: visual, sísmico, geodésico y geoquímico, de los cuales el más importante es el sísmico. La red de monitoreo del Popocatépetl está compuesta por 15 estaciones localizadas en las laderas circundantes del volcán en sitios con altitudes de hasta 4300 m y a 1.5 km del cráter. La instrumentación consta de 8 sismógrafos triaxiales de periodo corto, 4 de banda ancha, 4 inclinómetros biaxiales para medir deformación, una cámara de video con enlace de microondas, un radar doppler meteorológico y diversos equipos para mediciones geodésicas, análisis químicos y determinación de las concentraciones de gases SO2 y CO2. Más de 50 señales de telemetría son trasmitidas en forma continua hacia un puesto central de registro y procesamiento localizado en el CENAPRED. Allí y mediante una extensa red de computadoras, la actividad es monitoreada y procesada las 24 horas del día. Al detectarse cualquier incremento anormal de la actividad sísmica del volcán, se activa un sistema de alarma acústica y a través de un sistema de marcado automático se envian mensajes a teléfonos particulares celulares y localizadores del personal de guardia . Del análisis de la información, las recomendaciones relativas al nivel de alertamiento son tomadas por el Comité Técnico Científico Asesor, integrado por eminentes investigadores de la UNAM y del CENAPRED. Mediante reportes especiales, autoridades del gobierno y de Protección Civil son informadas periódicamente acerca del nivel de actividad del volcán. Para el público en general se dispone de un buzón telefónico con mensajes sobre su estado de actividad.
+          <div class="boton">
+          <a href="http://www.cenapred.unam.mx/es/">CENAPRED</a>
+          </div></p>
+            <br>    
+     </div>
+     <br>
+     <br>
+    <div data-role="footer" data-theme="b">
+      <h4>Aplicacion Tres, Prudente Carrera Mario Sinue</h4>
+    </div>
+   </div>
+  </div>
+  
+  <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Medidas de Prevención</h1>
+    </div>
+    <div data-role="content" align="center">
+       <h4 class="linea">Ceniza</h4>
+       <img src="imagenes/ceniza.png" width="500px" height="400px">
+       <h4 class="linea">Erupción</h4>
+       <img src="imagenes/erupcion.png" width="500px" height="400px">
+    <div data-role="footer" data-theme="b">
+      <h4>Aplicacion Tres, Prudente Carrera Mario Sinue</h4>
+    </div>
+   </div>
+  </div>
+ 
+  <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Estados que afecta en caso de erupción</h1>
+    </div>
+    <div data-role="content" align="center">
+      <div id="izquierda">
+      <center><img id="izquierda" src="imagenes/mapa.png" width="200px" height="200px"></center>
+          <p>Considerando la remota posibilidad de un evento mayor del Popocatépetl, los efectos más serios de una erupción grande están marcados en el Mapa de Peligros Volcánicos del Popocatépetl, que ha sido publicado por el Instituto de Geofísica de la UNAM. Se limitarían a la cercanía del volcán, sobre radios del orden de 20 a 30 km. Un evento de esta naturaleza debería ser previsto por los sistemas de detección y monitoreo del volcán con anticipación suficiente para tomar medidas preventivas. En las grandes ciudades, como México, D.F., cuyo centro se encuentra a 72 km. del cráter del volcán, Puebla a unos 43 km., Cuernavaca a 63 km. o Tlaxcala a 53 km., los efectos de tal evento se limitarían a los problemas derivados de lluvias de cenizas volcánicas, similares a las del 30 de junio de 1997, pero más fuertes y con una proporción mayor de cenizas más gruesas.
+
+ </p>
+          <p>Esto significa que en este escenario, en las grandes ciudades podrían esperarse lluvias de ceniza que pudieran causar molestias importantes a sus habitantes, pero de ninguna manera pueden esperarse efectos desastrosos como ríos de lava, grandes terremotos u otros fenómenos destructivos como aparecen en algunas películas de ficción.</p>
+      </div>
+      <br>
+    </div>
+    <div data-role="footer" data-theme="b">
+      <h4>Aplicacion Tres, Prudente Carrera Mario Sinue</h4>
+    </div>
+   </div>
+  </div>
+  
+    <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Otros volcanes</h1>
+    </div>
+    <div data-role="content">
+       <div id="derecha">
+       <h4 class="linea">Monte Vesubio</h4>
+       <h5>Descripción física</h5>
+       <center><img src="imagenes/vesubio1.png" width="200px" height="200px"></center>    
+
+        <p> La topografía está formada por dos elementos:</p>
+        <p>•	el monte Somma al norte, rodeado parcialmente por el borde empinado de la cumbre de la caldera, originado por el derrumbe de una estructura anterior y más elevada.9
+        <br>
+•	el «Gran Cono» se originó durante la erupción del año 79. Por esta razón, al volcán también se le llama Somma-Vesubio.10</p>
+         <p>La caldera comenzó a formarse durante una erupción hace unos 17.000 años (o 18.300),10 ampliada por antiguas y violentas erupciones concluyendo con la del 79. Esta estructura ha tomado su nombre del término "volcán somma", el cual describe al volcán con una cumbre en caldera rodeada de un cono reciente.</p>
+         <p>La altura del cono principal ha cambiado constantemente por las erupciones, pero en el presente es de 1281 msnm.10 El monte Somma tiene 1149 msnm de alto, y está separado del cono principal por el valle de Atrio di Cavallo, de unos 5 km de extensión. Las laderas de la montaña están marcadas por los flujos de lava, con mucha vegetación, con matorrales en cotas altas y viñedos en las bajas. El Vesubio es un volcán activo, aunque su actividad corriente produzca más que nada vapor emanado desde las grietas al pie del cráter.</p>
+         <p>El Vesubio es un volcán compuesto, sito en el límite convergente donde la placa africana empieza a ser subducida debajo de la placa euroasiática. Su lava está compuesta de viscosa andesita. Capas de lava, escorias, cenizas, ypiedra pómez componen la montaña. En las laderas hay dos domos de lava, surgidos en 1891 y 1895.</p>
+          </div>
+          <h5>Formación</h5>
+          <div id="izquierda">
+          <img src="imagenes/vesubio2.png" width="150px" height="150px">
+          <p>El Vesubio se formó del resultado de la colisión de dos placas tectónicas, la africana y la euroasiática. La primera fue forzada por debajo de la segunda, llegando a mucha profundidad bajo la corteza terrestre. El material de la corteza fue calentado hasta fundirse, formando el magma. Puesto que el magma es menos denso que la roca sólida a su alrededor, es empujado hacia arriba, buscando un lugar más débil en la superficie de la Tierra, rompiéndola y formando el volcán.</p>
+          <br>
+          <h5>Localización</h5>
+          <div id="izquierda">
+          <img src="imagenes/vesubio4.png" width="180px" height="180px">
+          <p>El monte Vesubio es un volcán activo del tipo vesubiano situado frente a la bahía de Nápoles y a unos nueve kilómetros de distancia de la ciudad de Nápoles. Se encuentra en la provincia de Nápoles, perteneciente a la región italiana de la Campania.</p>
+         </div>
+         <div id="derecha">
+         <br><h5>Erupciones</h5> 
+         <img src="imagenes/vesubio3.png" width="200px" height="200px">     
+            <p>Es famoso por la erupción que en el año 79 sepultó a las ciudades romanas de Pompeya y Herculano, permitiendo conservarlas intactas hasta que se redescubrieron en el siglo XVI, aunque las excavaciones sistemáticas comenzaron en 1738 y 1748, respectivamente. Hoy ambas ciudades son emplazamientos arqueológicos que permiten investigar la cultura romana y la vida de unas ciudades que han permanecido sin alteraciones desde la Edad Antigua. La erupción del año 79 supone, asimismo, la primera descripción histórica de una erupción vesubiana, realizada por Plinio el Joven, poco después de que sucediera. Debido a esto, los volcanes vesubianos son también conocidos como plinianos, y así también, por extensión, ese tipo de erupciones. Ha entrado en erupción muchas veces y hoy es considerado como uno de los volcanes más peligrosos del mundo, por la población de 3.000.000 de personas que viven en sus inmediaciones y la tendencia del Vesubio a tener erupciones explosivas.</p>
+            <p>Otras erupciones importantes son, secuencialmente, las del 472, 512, en 1631, seis veces en el siglo XVIII, ocho veces en el siglo XIX (notable la de 1872), y en 1906, 1929, y 1944. No ha habido erupciones desde 1944. Las erupciones variaron en gran medida en la gravedad, y se caracterizaron por explosivos estallidos. En ocasiones, las erupciones han sido tan grandes que la totalidad de la Europa meridional ha sido cubierta por cenizas; en 472 y en 1631, las cenizas del Vesubio cayeron sobre Constantinopla (Estambul), cubriendo una extensión aproximada de unos 1.600 km. Desde 1944, los desprendimientos de tierras del cráter han levantado nubes de polvo y ceniza, las cuales han provocado falsas alarmas de erupciones</p>
+            <br>
+             </div>
+             <div id="derecha">
+       <h4 class="linea">Volcán Krakatoa</h4>
+        <h5>Historia</h5>
+        <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','imagenes/krakatoa1a.png',1)"><img src="imagenes/krakatoa1.png" width="200px" height="200px" id="Image2"/></a> 
+            <p>En 1927 comenzaron nuevas erupciones volcánicas en el fondo del mar, de las que surgió una nueva isla en el mismo lugar conocida como Anak Krakatau ('Hijo de Krakatoa'). Esta isla sobrepasó la superficie del mar en 1928, y en 1973 ya alcanzaba una altura de 190 metros. Sigue creciendo a razón de unos 5 metros por año. La isla está deshabitada. Algunos geólogos aseguran que algún día el Anak Krakatau reventará quizá con la misma fuerza que el volcán anterior[cita requerida]. Hoy en día la isla tiene forma de cono de unos 300 m de altura con un cráter lateral que le da una apariencia extraña al entorno.</p>
+            <br>
+          <p>Antes de la erupción de 1883, Krakatoa consistía en tres islas y varios islotes. Lang (que significa 'larga' en neerlandés), ahora llamada Rakata Kecil o Panjang, y Verlaten ('Abandonado' o 'Desierto'), ahora Sertung, eran los remanentes de borde de una erupción de caldera anterior muy grande. La isla Krakatoa en sí misma tenía 9 kilómetros de largo por 5 kilómetros de ancho. También había un islote cubierto por árboles cerca de Lang llamado Poolsche Hoed ('el Sombrero Polaco', al parecer porque ésta se parecía desde el mar a un sombrero con cuatro alas original de Cracovia, Polonia), y varias pequeñas rocas o bancos entre Krakatoa y Verlaten.</p>
+          <p>Había tres conos volcánicos sobre Krakatoa: yendo de Sur a Norte estaban: Rakata (823 m), Danan (445 m), y Perboewatan (también llamado Perbuatan; 122 m). Danan puede haber sido un volcán gemelo. Krakatoa está directamente encima de la zona de subducción eurasiática y la placa Indoaustraliana, donde las fronteras de la placa emprenden un cambio agudo de dirección, posiblemente causando una corteza excepcionalmente débil en la región.</p>
+          <br>
+          </div>
+          <h5>Localización</h5> 
+         <div id="izquierda">
+          <img src="imagenes/krakatoa4.png" width="180px" height="180px">    
+            <p>Krakatoa fue una isla de tres conos volcánicos situada en el estrecho de Sonda, entre Java y Sumatra. Estaba localizada cerca de la región de subducción de la placa Indoaustraliana bajo la placa Euroasiática.</p>
+            <br>
+         </div> 
+          <h5>Anak Krakatoa</h5> 
+         <div id="derecha">
+          <img src="imagenes/krakatoa2.png" width="150px" height="150px">    
+            <p>En 1927 comenzaron nuevas erupciones volcánicas en el fondo del mar, de las que surgió una nueva isla en el mismo lugar conocida como Anak Krakatau ('Hijo de Krakatoa'). Esta isla sobrepasó la superficie del mar en 1928, y en 1973 ya alcanzaba una altura de 190 metros. Sigue creciendo a razón de unos 5 metros por año. La isla está deshabitada. Algunos geólogos aseguran que algún día el Anak Krakatau reventará quizá con la misma fuerza que el volcán anterior[cita requerida]. Hoy en día la isla tiene forma de cono de unos 300 m de altura con un cráter lateral que le da una apariencia extraña al entorno.</p>
+            <br>
+         </div> 
+          <div id="izquierda">
+         <h5>Factores y características de la erupción y explosión</h5>
+       <center><img src="imagenes/krakatoa3.png" width="200px" height="200px"></center>  
+        <p>Antes se pensaba que las grandes explosiones fueron debidas a vapor extremadamente caliente, generado cuando las paredes del volcán se fracturaron y entró agua del océano dentro de la cámara de magma desatando un tsunami de escala nunca antes vista. Investigaciones actuales revelan que las primeras erupciones vaciaron parcialmente la cámara de magma, permitiendo la entrada de nuevo magma a temperaturas muy superiores, generando gases que incrementaron la presión de manera incontrolable, el nuevo magma además se mezcló con magma en ascenso, la combinación desató energías cataclísmicas</p>
+        <p>La isla hizo explosión, con una energía de 200 megatones, es decir, 10 000 veces más poderosa que la bomba atómica de Hiroshima. La explosión se percibió en un 10 % del globo terráqueo viajando hasta la isla de Madagascar y en Australia (ambas islas distan entre sí unos 7600 km). Los tsunamis subsiguientes a la explosión alcanzaron los 40 m de altura y destruyeron 163 aldeas (incluyendo el faro de una de ellas, Fourthfour Point, del que sólo quedó la base) a lo largo de la costa de Java y Sumatra, matando a un total de 36 417 personas. La ceniza de la explosión alcanzó los 80 km de altitud y además viajó por la superficie del mar. Tres años después, los observadores de todo el mundo describían el crepúsculo y el alba de brillante colorido, producido por la refracción de los rayos solares en esas partículas minúsculas.</p>
+             </div>
+             <br>
+             <div id="derecha">
+             <h5>Tamaño</h5>
+          <img src="imagenes/krakatoa.png" width="150px" height="150px">    
+            <p>Krakatoa era un estratovolcán, es decir, compuesto por la estratificación de lava, cenizas, piedra pómez y otros materiales piroclásticos. La isla tenía 9 kilómetros de largo, unos 5 kilómetros de ancho y unos 28 kilómetros cuadrados de superficie. Rakata, en el sur, tenía 813-820 metros de altura sobre el nivel del mar; Perbuatan, al norte, medía 120 metros de altura, y Danan, en el centro, registraba 445-450 metros de altura sobre el nivel del mar.</p>
+            <br>
+            <br>
+         </div> 
+    <div data-role="footer" data-theme="b">
+      <h4>Aplicacion Tres, Prudente Carrera Mario Sinue</h4>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+
+
